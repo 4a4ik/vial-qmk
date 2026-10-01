@@ -1,0 +1,27 @@
+name: Build Sofle Vial Firmware
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ghcr.io/vial-kb/vial-docker:latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Compile UF2
+        run: |
+          make sofle/rev1:vial CONVERT_TO=helios
+
+      - name: Upload UF2 Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sofle_vial_firmware
+          path: |
+            *.uf2
+            *.hex
+            *.bin
