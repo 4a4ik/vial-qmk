@@ -15,7 +15,7 @@ jobs:
 
       - name: Compile BIN
         run: |
-          make sofle/rev1:vial CONVERT_TO=promicro_stm32f103
+          make sofle/rev1:vial
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
