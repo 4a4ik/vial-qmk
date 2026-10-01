@@ -13,6 +13,8 @@ COMBO_ENABLE = no
 KEY_OVERRIDE_ENABLE = no
 CAPS_WORD_ENABLE = no
 LAYER_LOCK_ENABLE = no
-
-
 REPEAT_KEY_ENABLE = no
+
+# Настройки для чипа APM32/STM32 и фикс старта при включении ноута:
+BOOTLOADER = stm32-dfu
+WAIT_FOR_USB = yes
