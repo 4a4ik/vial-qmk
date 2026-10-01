@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ghcr.io/vial-kb/vial-docker:latest
+    container: qmkfm/qmk_cli:latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
