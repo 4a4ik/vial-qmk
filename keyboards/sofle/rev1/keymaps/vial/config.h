@@ -19,7 +19,9 @@
 // clang-format off
 
 #pragma once
-
+#define WAIT_FOR_USB
+#define USB_SUSPEND_WAKEUP_DELAY 500
+#define USB_POLLING_INTERVAL_MS 1
 // Vial Support
 #define VIAL_KEYBOARD_UID { 0x05, 0xCD, 0x9F, 0x8A, 0xF4, 0xDF, 0xDE, 0xB2 }
 
