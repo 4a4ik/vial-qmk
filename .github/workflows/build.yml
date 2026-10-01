@@ -15,7 +15,7 @@ jobs:
 
       - name: Compile BIN
         run: |
-          make sofle/rev1:vial CONVERT_TO=stemcell BOOTLOADER=stm32-dfu
+          make sofle/rev1:vial CONVERT_TO=promicro_stm32f103
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
